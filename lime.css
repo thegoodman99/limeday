@@ -1,0 +1,224 @@
+
+	.lime-hero {
+		height: 32em;
+		background-position: top center;
+		background-size: cover;
+		position: relative;
+		z-index: 2;
+	}
+		h1 {
+			@include pfHeader;
+			@include transform-translate;
+			color: white;
+			text-transform: uppercase;
+			position: relative;
+			text-align: center;
+    	padding: 10%;
+			z-index: 2;
+		}
+		.lime-hero:after {
+			background: rgba(0,0,0,0.4);
+			content: '';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			bottom: 0;
+			z-index: 1;
+		}
+	
+
+	.outside{
+		position: relative;
+		overflow: hidden;
+	}
+		.grey-line {
+			height: 20em;
+			background: #555555;
+			position: relative;
+			z-index: 1;
+		}
+    	
+  	.lime1 {
+  		position: absolute;
+	    left: 50px;
+	    width: 54%;
+	    bottom:25%;
+	    opacity: 0.1;
+  	}
+
+  	.lime2 {
+  		position: absolute;
+	    right: -210px;
+	    width: 38%;
+	    top: 84px;
+	    opacity: .1;
+	    z-index: 0;
+  	}
+
+  	.lime3 {
+	  	position: absolute;
+	    left: -110px;
+	    width: 25%;
+	    top: -184px;
+	    opacity: .1;
+	    z-index: 1;
+  	}
+
+		.wrap {
+			margin: 0 10%;
+	    display: -ms-grid;
+    	display: grid;
+   		grid-template-columns: repeat(2,1fr);
+	    grid-gap: 70px;
+	    position: relative;
+    	bottom: 200px;
+    	z-index: 1;
+    	/*overflow: hidden;*/
+    }
+
+	    .wrap .container {
+	    	overflow: hidden;
+	    	position: relative;
+	    	
+				}
+
+				/*svg{
+					@include transform-translate;
+					height:200px;
+					width: 200px;
+					z-index: 1;
+					path{
+						fill: white;
+					}*/
+
+				.square {
+					padding: 25%;
+			    text-align: center;
+					background-position: top center;
+					background-size: cover;
+					position: relative;
+				}
+						
+
+					.square h2 {
+						
+						color: white;
+						text-transform: capitalize;
+						margin: auto auto;
+						position: relative;
+						text-align: center;
+			    	padding: 10px;
+			    	z-index: 1;
+					}	
+
+					.square p {
+						
+						color: white;
+						position: relative;
+						text-align: center;
+						font-size: larger;
+		    		font-weight: bold;
+		    		z-index: 1;
+				  }
+
+					.square .button {
+						
+						font-weight: bold;
+						background: white;
+						color: black;
+						text-transform: uppercase;
+						z-index: 1;
+				    transition: transform 0.2s;
+				    width: 50%;
+				    text-align: center;
+				    margin: auto;
+				    padding: 9px;
+				    border-radius: 3px;
+				    }
+
+				    .square .button a {
+				    	color: black;
+    					text-decoration: unset;
+				    }
+
+				    .selected:hover {
+				      transform: scale(1.05);
+		    		}
+					
+
+					
+	
+				.locked {
+						overflow: hidden;
+						filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+						-webkit-filter: url(#blur-filter);
+						filter: url(#blur-filter);
+						-webkit-filter: blur(1px);
+						filter: blur(20px);
+						z-index: 0;
+						}
+						.locked:after {
+							background-color:  rgba(0,0,0,0.4);
+							content: '';
+							width: 100%;
+							height: 100%;
+							position: absolute;
+							bottom: 0;
+							z-index: 0;
+							left: 0;
+						}				
+
+					.active {
+						filter:blur(0px);
+					}
+					.active:after {
+						background-color:  rgba(0,0,0,0.4);
+						content: '';
+						width: 100%;
+						height: 100%;
+						position: absolute;
+						bottom: 0;
+						z-index: 0;
+						left: 0;
+					}
+
+					.past {
+						filter: blur(0px);
+					}
+					.past:after {
+						background-color:  rgba(255,255,255,0.8);
+						content: '';
+						width: 100%;
+						height: 100%;
+						position: absolute;
+						bottom: 0;
+						z-index: 0;
+						left: 0;
+						}
+
+
+@media screen and (max-width: 768px){
+	.lime {
+		.outside{
+			.wrap {
+    		// -ms-grid-columns: (1fr) [1];
+    		grid-template-columns: repeat(1,1fr);
+    		margin: 0 5%;
+    		bottom: 250px;
+    		.past {
+    			display: none;
+    		}
+			}
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
